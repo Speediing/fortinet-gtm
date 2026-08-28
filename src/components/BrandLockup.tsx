@@ -7,7 +7,7 @@ export function BrandLockup({
     <div className={`brand-lockup brand-lockup-${size}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="https://www.fortinet.com/content/dam/fortinet/images/general/fortinet-logo.svg"
+        src="/brand/fortinet-wordmark.svg"
         alt="Fortinet"
         className="brand-ftnt"
       />

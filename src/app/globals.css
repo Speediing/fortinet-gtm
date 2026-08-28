@@ -5091,6 +5091,10 @@ button:active:not(:focus-visible),
     min-height: 44rem;
   }
 
+  .hero-watercolor-image {
+    object-position: 64% center;
+  }
+
   .hero-paper-shell {
     padding: 7rem 1.15rem 0;
   }

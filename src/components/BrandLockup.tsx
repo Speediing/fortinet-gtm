@@ -2,15 +2,14 @@ export function BrandLockup({
   size = "md",
 }: {
   size?: "sm" | "md" | "lg";
-  invert?: boolean;
 }) {
   return (
     <div className={`brand-lockup brand-lockup-${size}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/brand/datadog-wordmark.svg"
-        alt="Datadog"
-        className="brand-dd"
+        src="https://www.fortinet.com/content/dam/fortinet/images/general/fortinet-logo.svg"
+        alt="Fortinet"
+        className="brand-ftnt"
       />
       <span className="brand-times" aria-hidden>
         ×

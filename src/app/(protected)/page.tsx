@@ -1,7 +1,7 @@
 import { CompareTable } from "@/components/CompareTable";
 import { HeroTelemetry } from "@/components/HeroTelemetry";
 import { JobSection } from "@/components/JobSection";
-import { QuoteWall } from "@/components/QuoteWall";
+import { RosterChart } from "@/components/RosterChart";
 import { SiteNav } from "@/components/SiteNav";
 import { JOBS } from "@/data/jobs";
 
@@ -12,36 +12,41 @@ export default function HomePage() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="hero-watercolor-image"
-          src="/brand/watercolor-pad.png"
+          src="/brand/fortinet-watercolor-header.png"
           alt=""
         />
         <SiteNav />
+        <div className="hero-paper-shell">
+          <section className="hero-paper">
+            <HeroTelemetry />
+            <div>
+              <p className="eyebrow">A persistent agent fleet for Fortinet GTM</p>
+              <h1>Work keeps moving after the customer call ends.</h1>
+              <p className="hero-intro">
+                Grok Bot watches the tools your sellers already use, gives each
+                agent its own computer, and returns finished drafts for review.
+                A call, email, or target account can start the work.
+              </p>
+            </div>
+          </section>
+        </div>
       </div>
 
       <div className="report">
         <div className="report-hero">
-          <HeroTelemetry />
-          <section className="hero">
-            <div>
-              <p className="eyebrow">A proactive agent for every Datadog rep</p>
-              <h1>The agents that work while your reps sell.</h1>
-              <p className="hero-intro">
-                Grok Bot listens to calls, watches the inbox, and researches
-                accounts in the background. Work triggers it — not another
-                prompt.
-              </p>
-            </div>
+          <section className="usecase-framing">
+            <p className="eyebrow">Three working examples</p>
+            <h2>
+              An always-on agent fleet for the work around every Fortinet
+              seller.
+            </h2>
+            <p>
+              These are examples of what Grok Bot could do, not claims about
+              current Fortinet workflows.
+            </p>
           </section>
 
-          <section className="usecase-framing">
-            <p className="eyebrow">Three sample use cases</p>
-            <h2>
-              Grok Bot gives every seller their own fleet of always-available
-              agent teammates. Anything your sellers do today can be done
-              through Grok Bot.
-            </h2>
-            <p>These are three examples from millions — not the boundary.</p>
-          </section>
+          <RosterChart />
 
           <div className="metric-grid">
             {JOBS.map((job) => (
@@ -67,26 +72,20 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="orbit-break" aria-hidden>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/brand/watercolor-orbit.png" alt="" />
-      </div>
-
       <div className="report">
         <CompareTable />
-        <QuoteWall />
       </div>
 
       <footer className="site-footer">
         <div>
-          <p className="footer-title">Cursor for Datadog</p>
-          <p>Grok Bot for Datadog sales</p>
+          <p className="footer-title">Fortinet × SpaceXAI</p>
+          <p>Grok Bot for Fortinet GTM</p>
         </div>
         <address className="footer-contact">
-          <p>Datadog&apos;s existing Cursor contact</p>
-          <strong>Madeline Ingleby</strong>
-          <a href="mailto:madeline.ingleby@cursor.com">
-            madeline.ingleby@cursor.com
+          <p>Your Cursor account executive</p>
+          <strong>Mike Kelly</strong>
+          <a href="mailto:michael.kelly@cursor.com">
+            michael.kelly@cursor.com
           </a>
         </address>
       </footer>

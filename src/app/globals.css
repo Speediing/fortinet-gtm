@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #20231f;
-  --muted: #686b63;
-  --paper: #f5f1e8;
-  --surface: #fbf9f4;
-  --line: #d8d3c8;
-  --accent: #632ca6;
-  --accent-dark: #4c1d82;
-  --sage: #788274;
-  --blue: #5e7180;
+  --ink: #241f1c;
+  --muted: #706762;
+  --paper: #f3eadb;
+  --surface: #fffaf1;
+  --line: #d9cbbd;
+  --accent: #da291c;
+  --accent-dark: #9b1d16;
+  --sage: #496b57;
+  --blue: #596872;
   --bg: var(--paper);
   --bg-deep: var(--ink);
   --ink-soft: var(--muted);
   --kicker: var(--accent);
   --panel: var(--surface);
-  --line-strong: #c8c3b7;
+  --line-strong: #c5b5a5;
   --shot: var(--surface);
   --shot-ink: var(--ink);
   --shot-muted: var(--muted);
@@ -315,16 +315,16 @@ button:active:not(:focus-visible),
 }
 
 .brand-lockup {
-  --dd-h: 36px;
+  --brand-h: 18px;
   display: inline-flex;
-  align-items: flex-start;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.42rem;
   min-width: 0;
   color: var(--ink);
   text-decoration: none;
 }
 
-.brand-dd,
+.brand-ftnt,
 .brand-sxai {
   display: block;
   width: auto;
@@ -334,35 +334,30 @@ button:active:not(:focus-visible),
   object-fit: contain;
 }
 
-.brand-dd {
-  height: var(--dd-h);
+.brand-ftnt {
+  height: var(--brand-h);
 }
 
 .brand-sxai {
-  height: calc(var(--dd-h) * 0.58);
-  max-width: calc(var(--dd-h) * 4.8);
-  margin-top: calc(var(--dd-h) * 0.2);
+  height: calc(var(--brand-h) * 0.52);
+  max-width: calc(var(--brand-h) * 4.5);
   filter: brightness(0);
 }
 
-.brand-lockup.is-invert .brand-sxai {
-  filter: none;
-}
-
 .brand-lockup-sm {
-  --dd-h: 24px;
+  --brand-h: 16px;
 }
 
 .brand-lockup-md,
 .brand-lockup-lg {
-  --dd-h: 32px;
+  --brand-h: 18px;
 }
 
 .brand-times {
   align-self: center;
   margin-top: 0;
   color: var(--muted);
-  font-size: calc(var(--dd-h) * 0.28);
+  font-size: calc(var(--brand-h) * 0.56);
   font-weight: 300;
   line-height: 1;
 }
@@ -405,17 +400,68 @@ button:active:not(:focus-visible),
 .hero-watercolor {
   position: relative;
   width: 100%;
+  min-height: min(800px, 92vh);
   overflow: hidden;
-  background: #1a1b18;
+  background: #eadbca;
 }
 
 .hero-watercolor-image {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
-  max-height: min(72vh, 820px);
+  height: 100%;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center;
+}
+
+.hero-watercolor::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 241, 0.1), transparent 32%),
+    linear-gradient(90deg, rgba(243, 234, 219, 0.42), transparent 54%);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-paper-shell {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: min(1440px, 100%);
+  min-height: min(800px, 92vh);
+  align-items: flex-end;
+  margin: 0 auto;
+  padding: 9rem clamp(24px, 5vw, 72px) 0;
+}
+
+.hero-paper {
+  position: relative;
+  width: min(70rem, 86%);
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 5.5rem);
+  border: 1px solid rgba(81, 57, 45, 0.14);
+  border-bottom: 0;
+  background: rgba(255, 250, 241, 0.94);
+  box-shadow: 0 -1.2rem 4rem rgba(63, 34, 24, 0.11);
+  backdrop-filter: blur(10px);
+}
+
+.hero-paper > div {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-paper h1 {
+  max-width: 58rem;
+  margin: 1.5rem 0 2rem;
+  color: var(--ink);
+  font-size: clamp(3.75rem, 7.7vw, 7.6rem);
+  font-weight: 450;
+  letter-spacing: -0.072em;
+  line-height: 0.86;
 }
 
 .hero-telemetry {
@@ -909,7 +955,7 @@ button:active:not(:focus-visible),
 
 .story-transcript-ui {
   background:
-    linear-gradient(155deg, rgba(99, 44, 166, 0.08), transparent 55%),
+    linear-gradient(155deg, rgba(218, 41, 28, 0.08), transparent 55%),
     var(--surface);
 }
 
@@ -975,12 +1021,12 @@ button:active:not(:focus-visible),
   border-radius: 0.38rem;
   color: #fff;
   background:
-    radial-gradient(circle at 90% 12%, rgba(99, 44, 166, 0.8), transparent 34%),
+    radial-gradient(circle at 90% 12%, rgba(218, 41, 28, 0.8), transparent 34%),
     #29242f;
 }
 
 .story-mini-slide small {
-  color: #c6a7ea;
+  color: #f0afa9;
   font-family: var(--mono);
   font-size: 0.45rem;
   font-weight: 700;
@@ -1002,7 +1048,7 @@ button:active:not(:focus-visible),
   padding: 0.19rem 0.34rem;
   border-radius: 0.2rem;
   color: #1b1820;
-  background: #d9b8ff;
+  background: #f0afa9;
   font-size: 0.48rem;
   font-weight: 700;
 }
@@ -1013,7 +1059,7 @@ button:active:not(:focus-visible),
 
 .story-email-ui {
   background:
-    linear-gradient(145deg, rgba(99, 44, 166, 0.06), transparent 58%),
+    linear-gradient(145deg, rgba(218, 41, 28, 0.06), transparent 58%),
     var(--surface);
 }
 
@@ -1191,7 +1237,7 @@ button:active:not(:focus-visible),
 
 .story-research-ui {
   background:
-    radial-gradient(circle at 50% 60%, rgba(99, 44, 166, 0.11), transparent 48%),
+    radial-gradient(circle at 50% 60%, rgba(218, 41, 28, 0.11), transparent 48%),
     var(--surface);
 }
 
@@ -1312,7 +1358,7 @@ button:active:not(:focus-visible),
   place-items: center;
   border-radius: 50%;
   color: #1b1820;
-  background: #d9b8ff;
+  background: #f0afa9;
   font-size: 0.5rem;
   font-weight: 800;
 }
@@ -1428,6 +1474,20 @@ button:active:not(:focus-visible),
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: none;
+}
+
+.leave-artifact {
+  padding: clamp(1rem, 3vw, 2rem);
+  background:
+    linear-gradient(145deg, rgba(218, 41, 28, 0.05), transparent 55%),
+    var(--surface);
+}
+
+.leave-artifact .art {
+  margin: 0;
+  border-color: color-mix(in srgb, var(--accent) 16%, var(--line));
+  border-radius: 3px;
+  background: #fff;
 }
 
 .leave h3 {
@@ -5026,6 +5086,25 @@ button:active:not(:focus-visible),
     padding: 16px 20px;
   }
 
+  .hero-watercolor,
+  .hero-paper-shell {
+    min-height: 44rem;
+  }
+
+  .hero-paper-shell {
+    padding: 7rem 1.15rem 0;
+  }
+
+  .hero-paper {
+    width: 100%;
+    padding: 2.2rem 1.45rem 2.6rem;
+  }
+
+  .hero-paper h1 {
+    margin: 1rem 0 1.4rem;
+    font-size: clamp(3.2rem, 13vw, 5.3rem);
+  }
+
   .header-actions {
     display: flex;
     gap: 0.12rem;
@@ -5583,12 +5662,16 @@ button:active:not(:focus-visible),
 }
 
 @media (max-width: 640px) {
-  .nav-brand {
-    display: none;
+  .site-header {
+    gap: 0.75rem;
   }
 
-  .site-header {
-    justify-content: flex-end;
+  .header-actions {
+    overflow-x: auto;
+  }
+
+  .header-actions .text-button:first-child {
+    display: none;
   }
 
   .hero h1,

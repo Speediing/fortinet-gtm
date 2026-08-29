@@ -1,6 +1,7 @@
 import { CompareTable } from "@/components/CompareTable";
-import { HeroTelemetry } from "@/components/HeroTelemetry";
+import { HeroDemo } from "@/components/HeroDemo";
 import { JobSection } from "@/components/JobSection";
+import { QuoteWall } from "@/components/QuoteWall";
 import { RosterChart } from "@/components/RosterChart";
 import { SiteNav } from "@/components/SiteNav";
 import { JOBS } from "@/data/jobs";
@@ -17,18 +18,7 @@ export default function HomePage() {
         />
         <SiteNav />
         <div className="hero-paper-shell">
-          <section className="hero-paper">
-            <HeroTelemetry />
-            <div>
-              <p className="eyebrow">A persistent agent fleet for Fortinet GTM</p>
-              <h1>Work keeps moving after the customer call ends.</h1>
-              <p className="hero-intro">
-                Grok Bot watches the tools your sellers already use, gives each
-                agent its own computer, and returns finished drafts for review.
-                A call, email, or target account can start the work.
-              </p>
-            </div>
-          </section>
+          <HeroDemo />
         </div>
       </div>
 
@@ -74,6 +64,10 @@ export default function HomePage() {
 
       <div className="report">
         <CompareTable />
+      </div>
+
+      <div className="report">
+        <QuoteWall />
       </div>
 
       <footer className="site-footer">
